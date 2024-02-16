@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./LoginPage.scss";
+import { setLoggedIn } from "../../Auth/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -7,8 +10,15 @@ const LoginPage = () => {
 
   const isValidACC = username.trim().length < 6 || password.length < 6;
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    dispatch(setLoggedIn(username));
+    localStorage.setItem("username", username);
+    navigate("/");
   };
 
   return (

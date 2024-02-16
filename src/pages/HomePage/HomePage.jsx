@@ -1,8 +1,14 @@
 import React from "react";
 import "./HomePage.scss";
+import Navbar from "../../components/Navbar/Navbar";
 
 const HomePage = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Navbar />
+      <div>shop</div>
+    </>
+  );
 };
 
 export default HomePage;
