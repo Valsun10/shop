@@ -1,7 +1,8 @@
 import React from "react";
 import "./Navbar.scss";
-import cartIMG from "../../assets/navbar-images/empty-cart.png";
+import emptycartIMG from "../../assets/navbar-images/emptycart.png";
 import emptyHeartIMG from "../../assets/navbar-images/emptyheart.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,9 +11,13 @@ const Navbar = () => {
         <h1>Exclusive</h1>
       </div>
       <div className="navbar-links">
-        <p>Home</p>
-        <p>Shop</p>
-        <p>Contact</p>
+        <Link to="/" className="link">
+          Home
+        </Link>
+        <Link to="/shop" className="link">
+          Shop
+        </Link>
+        <Link className="link">Contact</Link>
       </div>
       <div className="navbar-cart">
         <img
@@ -20,7 +25,7 @@ const Navbar = () => {
           alt="liked clothes"
           style={{ height: "35px" }}
         />
-        <img src={cartIMG} alt="cart" style={{ height: "35px" }} />
+        <img src={emptycartIMG} alt="cart" style={{ height: "35px" }} />
       </div>
     </div>
   );
