@@ -1,0 +1,26 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  background-color: rgba($color: #a7a4a4, $alpha: 0.1);
+
+  &-links {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+  }
+
+  &-logo {
+    width: 15%;
+  }
+
+  &-cart {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+}
