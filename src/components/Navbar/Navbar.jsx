@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { reset } from "../../Auth/authSlice";
 
 const Navbar = () => {
-  const { isLoggedIn } = useSelector((state) => state.auth);
   const userName = localStorage.getItem("username");
 
   const dispatch = useDispatch();
@@ -26,7 +25,7 @@ const Navbar = () => {
         <h1>Exclusive</h1>
       </div>
       <div className="navbar-links">
-        {!isLoggedIn ? (
+        {!userName ? (
           <Link to="/login" className="link">
             Log in
           </Link>

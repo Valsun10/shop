@@ -1,0 +1,40 @@
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  .home-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .home-products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    > h1 {
+      font-size: 62px;
+      letter-spacing: 1.5px;
+      padding-bottom: 20px;
+    }
+
+    .products-container {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 100px;
+      padding: 90px 65px;
+      background-color: rgba($color: #000000, $alpha: 0.05);
+    }
+  }
+}
